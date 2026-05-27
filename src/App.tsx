@@ -122,7 +122,7 @@ const WAREHOUSES: Record<WarehouseId, WarehouseEntry> = {
         <div><b>Shape:</b> 3 separated racks (1st left, 2nd top-middle, 3rd right) — gaps between</div>
         <div><b>Path:</b> +Y (1st rack) → skip 1500 → +X (2nd rack) → skip 1500 → +Y (3rd rack)</div>
         <div><b>Bay dim:</b> 1500 × 1500 × 6000 (square, orientation-agnostic)</div>
-        <div><b>Aisle bbox:</b> 9000 × 4500 × 6000 (encompasses all 3 racks)</div>
+        <div><b>Aisle box:</b> 9000 × 4500 × 6000 (encompasses all 3 racks)</div>
         <div style={{ marginTop: 6 }}>
           <b>Counts:</b> 1 aisle · 6 bays · 12 levels · 12 bins
         </div>
@@ -148,10 +148,10 @@ const TYPE_LABELS: Record<SegmentType, string> = {
 };
 
 const TYPE_DESCRIPTIONS: Record<SegmentType, string> = {
-  AISLE: 'Aisle bbox (Interp B — contains its bays)',
+  AISLE: 'Aisle box',
   BAY:   'Rack column',
   LEVEL: 'Shelf inside a bay',
-  BIN:   'Pickable slot (leaf)',
+  BIN:   'leaf slot',
 };
 
 export function App() {
