@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warehouse 3D Viewer</title>
+    <style>
+      body { margin: 0; padding: 0; font-family: sans-serif; background: #1a1a1a; }
+      #root { width: 100vw; height: 100vh; }
+
+      /* Move the drei <Stats /> panel out of the top-left so it doesn't
+         overlap the title bar. Stats.js uses inline `top: 0; left: 0` — we
+         override with !important. To hide the panel entirely, set
+         display: none here, or remove <Stats /> from WarehouseSceneLarge.tsx. */
+      .r3f-stats {
+        top: auto !important;
+        left: auto !important;
+        bottom: 0 !important;
+        right: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
